@@ -1,0 +1,9 @@
+:root {
+    --textGrey: grey;
+    --textWhite: white;
+}
+
+
+body {
+    background-color: rgb(61, 60, 60);
+}
