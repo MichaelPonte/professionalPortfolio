@@ -1,9 +1,69 @@
+/* Global Vars */
 :root {
-    --textGrey: grey;
-    --textWhite: white;
+    --colorSheenGold: rgb(203, 161, 53);
+    --colorAquaMarine: rgb(127, 239, 189);
+    --colorEggshell: rgb(243, 239, 224);
+    --colorBlueMunsell: rgb(45, 147, 173);
+    --colorGunMetal: rgb(20, 54, 66);
 }
 
+/* Removes padding and margin from all elements to help with customization */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
+/* Page background colour */
 body {
-    background-color: rgb(61, 60, 60);
+    background-color: rgb(22, 22, 22);
 }
+
+/* Header CSS Start */
+header {
+    padding: 26px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--colorGunMetal);
+}
+
+header h1 {
+    padding-bottom: 30px;
+    font-size: 48px;
+    color: var(--colorEggshell);
+}
+/* h1 "M" is larger and grey */
+.bigM {
+    font-size: 80px;
+    color: var(--colorBlueMunsell);
+}
+/* h1 "P" is larger and grey */
+.bigP {
+    font-size: 80px;
+    color: var(--colorBlueMunsell);
+}
+
+/* header nav {
+    float: right;
+    margin-right: 5%;
+} */
+/* removes bulletpoints */
+header ul {
+    list-style: none;
+}
+
+header li {
+    display: inline-block;
+    margin-left: 28px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--colorEggshell);
+    font-size: large;
+}
+/* Header CSS End */
+
+article {
+    flex: auto;
+}
+
