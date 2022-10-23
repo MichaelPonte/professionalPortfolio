@@ -1,10 +1,11 @@
 /* Global Vars */
 :root {
-    --colorSheenGold: rgb(203, 161, 53);
+    --colorHover: rgb(203, 161, 53);
     --colorAquaMarine: rgb(127, 239, 189);
-    --colorEggshell: rgb(243, 239, 224);
-    --colorBlueMunsell: rgb(45, 147, 173);
-    --colorGunMetal: rgb(20, 54, 66);
+    --textColorDefault: rgb(243, 239, 224);
+    --textColorBigLetters: rgb(45, 147, 173);
+    --colorHeaderBackground: rgb(20, 54, 66);
+    --textColorH2: rgb(228, 193, 249);
 }
 
 /* Removes padding and margin from all elements to help with customization */
@@ -16,36 +17,36 @@
 
 /* Page background colour */
 body {
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(34, 34, 34);
 }
 
 /* Header CSS Start */
 header {
     padding: 26px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: var(--colorGunMetal);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
 
+/* Header h1 changes */
 header h1 {
     padding-bottom: 30px;
-    font-size: 48px;
-    color: var(--colorEggshell);
-}
-/* h1 "M" is larger and grey */
-.bigM {
-    font-size: 80px;
-    color: var(--colorBlueMunsell);
-}
-/* h1 "P" is larger and grey */
-.bigP {
-    font-size: 80px;
-    color: var(--colorBlueMunsell);
+    font-size: 58px;
+    color: var(--textColorDefault);
 }
 
-/* header nav {
-    float: right;
-    margin-right: 5%;
-} */
+/* h1 "M" is larger and grey */
+.bigM {
+    font-size: 100px;
+    color: var(--textColorBigLetters);
+}
+
+/* h1 "P" is larger and grey */
+.bigP {
+    font-size: 100px;
+    color: var(--textColorBigLetters);
+}
+
 /* removes bulletpoints */
 header ul {
     list-style: none;
@@ -58,12 +59,51 @@ header li {
 
 a {
     text-decoration: none;
-    color: var(--colorEggshell);
+    color: var(--textColorDefault);
     font-size: large;
+    
+}
+
+/* Changes text color when hovering over navigation text */
+a:hover {
+    color: var(--colorHover);
 }
 /* Header CSS End */
 
+/* Main Area CSS Start */
 article {
-    flex: auto;
+    width: 80%;
+    margin-top: 24px;
+    margin-right: 24px;
+    padding: 12px;
+    float: right;
+    color: var(--textColorDefault);
+    background-color: rgb(22, 22, 22);
 }
 
+article h2 {
+    padding-bottom: 8px;
+    padding-left: 20px;
+    color: var(--textColorH2);
+    font-size: 32px;
+}
+
+article p {
+    margin-left: 100px;
+}
+
+.profileImg {
+    float: left;
+    margin-right: 12px;
+}
+
+/* Main Area CSS End */
+
+/* Footer CSS Start */
+
+footer {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Footer CSS End */
