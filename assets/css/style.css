@@ -13,6 +13,8 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    width: 100vw;
+    overflow-x: hidden; /* hides overflowed webpage on the right */
 }
 
 /* Page background colour */
@@ -22,6 +24,7 @@ body {
 
 /* Header CSS Start */
 header {
+    width: 100vw;
     padding: 26px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: rgb(2,0,36);
@@ -52,12 +55,14 @@ header ul {
     list-style: none;
 }
 
+/* Puts nav buttons side by side */
 header li {
-    display: inline-block;
+    display: inline;
     margin-left: 28px;
 }
 
-a {
+/* Changes font size of nav buttons to large and removes underlines*/
+body a {
     text-decoration: none;
     color: var(--textColorDefault);
     font-size: large;
@@ -70,9 +75,65 @@ a:hover {
 }
 /* Header CSS End */
 
+
+
 /* Main Area CSS Start */
+
+/* Customization to About Me area */
+.aboutMe {
+
+}
+
+/* Customization to My Work area */
+.myWork {
+    height: 600px;
+}
+
+/* Customization to Contact Me area */
+.contactMe {
+    margin-bottom: 24px;
+}
+
+/* Changes h3 elements to be block */
+.contactMe h3 {
+    display: block;
+}
+
+/* Customization to Extra Info area */
+.extras {
+    float: left;
+    height: 624px;
+    width: 20vw;
+    margin-top: 24px;
+    margin-left: 24px;
+    color: var(--textColorDefault);
+    background-color: rgb(22, 22, 22);
+}
+
+/* CHanges h2 element to look like others */
+.extras h2 {
+    width: fit-content;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    color: var(--textColorH2);
+    font-size: 32px;
+}
+
+/* Fits p element withing the area with 12px padding */
+.extras p {
+    width: fit-content;
+    padding: 12px;
+}
+
+/* Changes padding and margin of element */
+element {
+    margin-top: 24px;
+    padding: 12px;
+}
+
+/* Customization to all article elements */
 article {
-    width: 80%;
+    width: 75vw;
     margin-top: 24px;
     margin-right: 24px;
     padding: 12px;
@@ -82,6 +143,7 @@ article {
 }
 
 article h2 {
+    width: fit-content;
     padding-bottom: 8px;
     padding-left: 20px;
     color: var(--textColorH2);
@@ -89,12 +151,14 @@ article h2 {
 }
 
 article p {
-    margin-left: 100px;
+    width: fit-content;
 }
 
+/* Moves image withing its article and makes size constant */
 .profileImg {
     float: left;
     margin-right: 12px;
+    max-width: max-content;
 }
 
 /* Main Area CSS End */
@@ -102,8 +166,26 @@ article p {
 /* Footer CSS Start */
 
 footer {
-    padding: 40px;
+    padding: 40px 0px;
     text-align: center;
 }
 
 /* Footer CSS End */
+
+/* Changes elements when screen width is smaller that 1200px */
+@media screen and (max-width: 1200px) {
+
+    article {
+        float: left;
+        margin-left: 24px;
+        width: calc(100vw - 48px);
+    }
+
+    .extras {
+        float: left;
+        width: calc(100vw - 48px);
+        height: auto;
+        margin-left: 24px;
+        display: block;
+    }
+}
